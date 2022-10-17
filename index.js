@@ -24,7 +24,7 @@ function getFileDate() {
 
 
   app.get("/", function (request, response) {
-    response.send("🙋‍♂️, 🌏 🎊✨🤩");
+    response.send("Endpoints:<br><br>"+"To create file : /createfile <br><br>" +"To read all files : /getfilelist");
   });
 
 
