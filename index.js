@@ -1,7 +1,11 @@
 import express from "express"; 
 const app = express();
 import fs from 'fs'
-const PORT = 4000;
+import dotenv from 'dotenv'
+dotenv.config();
+
+
+const PORT = process.env.PORT;
 
 
 
@@ -53,6 +57,7 @@ app.get("/getfilelist", (req,res)=>{
 
     })
 })
+
 
 
 app.listen(PORT, () => console.log(`The server started in: ${PORT} ✨✨`));
