@@ -28,7 +28,7 @@ function getFileDate() {
 
 
   app.get("/", function (request, response) {
-    response.send("Endpoints:<br><br>"+"To create file : /createfile <br><br>" +"To read all files : /getfilelist");
+    response.send("Endpoints:<br><br>"+"To create file : /createfile <br><br>" +"To read all files : /getfiles");
   });
 
 
@@ -42,7 +42,7 @@ function getFileDate() {
 })
 
 
-app.get("/getfilelist", (req,res)=>{
+app.get("/getfiles", (req,res)=>{
     fs.readdir("./Backup/",(err, files)=>{
 
         if(files.length == 0) {
@@ -57,7 +57,5 @@ app.get("/getfilelist", (req,res)=>{
 
     })
 })
-
-
 
 app.listen(PORT, () => console.log(`The server started in: ${PORT} ✨✨`));
