@@ -1,4 +1,4 @@
-import express from "express"; // "type": "module"
+import express from "express"; 
 const app = express();
 import fs from 'fs'
 const PORT = 4000;
@@ -53,23 +53,6 @@ app.get("/getfilelist", (req,res)=>{
 
     })
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 app.listen(PORT, () => console.log(`The server started in: ${PORT} ✨✨`));
